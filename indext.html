@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a0933; /* ពណ៌ផ្ទៃខាងក្រោយងងឹត */
+            color: #ffffff;
+            font-family: 'Khmer OS Battambang', sans-serif;
+        }
+        /* របារប្តូរភាសាខាងលើគេបង្អស់ */
+        .translate-bar {
+            background-color: #ffffff;
+            padding: 8px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        /* របារម៉ឺនុយដើមរបស់អ្នក (Header Navbar) */
+        .custom-header {
+            background-color: #0b132b; /* ពណ៌ខៀវក្រម៉ៅ */
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .brand-title {
+            color: #00b4d8; /* ពណ៌ខៀវ My Website */
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .header-menu {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .header-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .header-menu a:hover {
+            color: #00b4d8;
+        }
+        /* ផ្នែក Scrollspy ខាងក្រោម */
+        .scrollspy-container {
+            background-color: #3b1895; /* ពណ៌ស្វាយ */
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            height: 450px;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar-scroll" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+
+    <!-- ១. របារប្តូរភាសា Google Translate -->
+    <div class="translate-bar">
+        <span style="color: #333; font-weight: bold; margin-right: 10px;">ប្តូរភាសា / Change Language:</span>
+        <div id="google_translate_element" style="display: inline-block; vertical-align: middle;"></div>
+    </div>
+
+    <!-- ២. របារម៉ឺនុយដើមដ៏ស្អាតរបស់អ្នក (Header Navbar) -->
+    <header class="custom-header">
+        <a href="#" class="brand-title">My Website</a>
+        <ul class="header-menu" id="navbar-scroll">
+            <li><a href="#scrollspyHeading1">ទំព័រដើម</a></li>
+            <li><a href="#scrollspyHeading2">ដំឡាញ់</a></li>
+            <li><a href="#scrollspyHeading3">គោលបំណង</a></li>
+            <li><a href="#scrollspyHeading4">Contact 📞</a></li>
+        </ul>
+    </header>
+
+    <!-- ៣. ខ្លឹមសារអត្ថបទ Scrollspy ពណ៌ស្វាយ -->
+    <div class="container">
+        <div class="scrollspy-container">
+            
+            <h4 id="scrollspyHeading1" class="text-info">First</h4>
+            <p>...this is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component to provide efficiency.</p>
+            <hr>
+
+            <h4 id="scrollspyHeading2" class="text-info">Second heading</h4>
+            <p>...this is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted.</p>
+            <hr>
+
+            <h4 id="scrollspyHeading3" class="text-info">Third heading</h4>
+            <p>...this is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component to provide efficiency.</p>
+            <hr>
+
+            <h4 id="scrollspyHeading4">Fourth heading</h4>
+            <p>...this is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component to provide efficiency.</p>
+            <hr>
+
+            <h4 id="scrollspyHeading5">Fifth heading</h4>
+            <p>...this is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component to provide efficiency.</p>
+            
+        </div>
+    </div>
+
+    <!-- ៤. កូដ Script ដំណើរការ Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'km,en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://google.com"></script>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://jsdelivr.net"></script>
+</body>
+</html>
